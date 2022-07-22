@@ -1,5 +1,5 @@
 /* Color Theme Swatches in Hex */
-.My-Color-Theme-1-hex { color: #00A889; }
+.My-Color-Theme-1-hex { color: #053a30; }
 .My-Color-Theme-2-hex { color: #ABFFEF; }
 .My-Color-Theme-3-hex { color: #1AF0C9; }
 .My-Color-Theme-4-hex { color: #A32D00; }
@@ -8,7 +8,7 @@
 /* Color Theme Swatches in RGBA */
 .My-Color-Theme-1-rgba { color: rgba(0, 168, 137, 1); }
 .My-Color-Theme-2-rgba { color: rgba(171, 255, 239, 1); }
-.My-Color-Theme-3-rgba { color: rgba(26, 240, 201, 1); }
+.My-Color-Theme-3-rgba { color: rgb(8, 91, 75); }
 .My-Color-Theme-4-rgba { color: rgba(163, 45, 0, 1); }
 .My-Color-Theme-5-rgba { color: rgba(240, 85, 26, 1); }
 
@@ -18,3 +18,70 @@
 .My-Color-Theme-3-hsla { color: hsla(169, 87, 52, 1); }
 .My-Color-Theme-4-hsla { color: hsla(16, 100, 31, 1); }
 .My-Color-Theme-5-hsla { color: hsla(16, 87, 52, 1); }
+
+html {
+    box-sizing: border-box; 
+} 
+
+body {
+   padding: 15px;
+    margin: 15px; 
+}
+
+/* Nav Bar Style */
+nav {
+    font-size: 150%;
+    font-family:'Times New Roman', Times, serif
+    position: sticky;
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+    padding: 0rem 1rem 1rem 1rem;
+    background-color: #ABFFEF;
+    background-image: linear-gradient(to top, #ABFFEF 0%, #00A889 100%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16)
+  }
+
+
+nav h1 a {
+    text-align: center;
+    font-family: var(--sans);
+  }
+
+  nav li{
+    padding: 8px;
+    display: inline-flex;
+    justify-content: space-between;
+    
+  }
+  nav button {
+    background-color:#ABFFEF;
+    color: #A32D00;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    list-style-type: none;
+    justify-content: space-between;
+    border-radius: 8px;
+    font-size: 80%;
+  }
+
+  nav li:first-child {
+    flex-basis: 100%;
+  }
+
+  nav h1 {
+    font-size: 100%;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    color:#A32D00;
+    text-decoration: none;
+  }
+  
+  nav button:hover {
+    background-color: #1AF0C9;
+  }
