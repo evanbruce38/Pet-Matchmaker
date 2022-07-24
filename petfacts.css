@@ -1,3 +1,53 @@
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex {
+  color: #053a30;
+}
+.My-Color-Theme-2-hex {
+  color: #abffef;
+}
+.My-Color-Theme-3-hex {
+  color: #1af0c9;
+}
+.My-Color-Theme-4-hex {
+  color: #a32d00;
+}
+.My-Color-Theme-5-hex {
+  color: #f0551a;
+}
+
+/* Color Theme Swatches in RGBA */
+.My-Color-Theme-1-rgba {
+  color: rgba(0, 168, 137, 1);
+}
+.My-Color-Theme-2-rgba {
+  color: rgba(171, 255, 239, 1);
+}
+.My-Color-Theme-3-rgba {
+  color: rgb(8, 91, 75);
+}
+.My-Color-Theme-4-rgba {
+  color: rgba(163, 45, 0, 1);
+}
+.My-Color-Theme-5-rgba {
+  color: rgba(240, 85, 26, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.My-Color-Theme-1-hsla {
+  color: hsla(168, 100, 32, 1);
+}
+.My-Color-Theme-2-hsla {
+  color: hsla(168, 100, 83, 1);
+}
+.My-Color-Theme-3-hsla {
+  color: hsla(169, 87, 52, 1);
+}
+.My-Color-Theme-4-hsla {
+  color: hsla(16, 100, 31, 1);
+}
+.My-Color-Theme-5-hsla {
+  color: hsla(16, 87, 52, 1);
+}
 body {
   font-family: var(--ff-primary);
   font-size: 1rem;
@@ -42,7 +92,8 @@ body {
 .card__title {
   font-size: 1.25rem;
   line-height: 1.1;
-  color: firebrick;
+  color: #a32d00;
+  ;
 }
 
 .card__price {
