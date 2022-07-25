@@ -125,7 +125,7 @@ body {
   }
 }
 
-.main-title {
+.btn {
   font-size: clamp(2rem, 5vw + 1rem, 5rem);
   line-height: 1;
   color: white;

@@ -1,38 +1,62 @@
 /////////global variables/////////
-var getDogFactsButton = document.querySelector (".btn")
-var queryUrl = "https://dog.ceo/api/breeds/image/random";
+var getPetFactsButton = document.querySelector (".btn")
+var dogQueryUrl = "https://dog.ceo/api/breeds/image/random";
 var dogContainerEl = document.createElement("img")
-var parentContainerEl = document.querySelector(".parent-container");
+var dogParentContainerEl = document.querySelector(".dog-parent-container");
 
-getDogFactsButton.addEventListener("click", function(){
+var catApiKey = "806b4584-de1a-4111-93e7-df9074e55aba";
+var catQueryUrl = "https://api.thecatapi.com/v1/images?api_key=" + catApiKey;
+var catContainerEl = document.createElement("img");
+var catParentContainerEl = document.querySelector(".cat-parent-container");
+
+//////Event Listener for the get pet facts button//////
+getPetFactsButton.addEventListener("click", function(){
 getRandomDogPic();
+getRandomCatPic();
 })
 
 
 
 //////////fetching random dog pic///////////
 function getRandomDogPic(){
-fetch(queryUrl).then (function (response){
-    console.log(response)
-    if (response.ok){
-        response.json().then(function(data){
-            console.log(data)
+fetch(dogQueryUrl).then(function (response) {
+//   console.log(response);
+  if (response.ok) {
+    response.json().then(function (data) {
+    //   console.log(data);
 
-            displayRandomDogPic(data)
-        })
-    }
-})
-
+      displayRandomDogPic(data);
+    });
+  }
+});
+}
+/////////////display random dog pic//////////
+function displayRandomDogPic(data){
+    // console.log(data.message)
+    dogParentContainerEl.appendChild(dogContainerEl);
+    dogContainerEl.setAttribute('src', data.message)
+    dogContainerEl.className = "card stacked card_img"
 }
 
 
-/////////////display random dog pic//////////
-function displayRandomDogPic(data){
-    console.log(data.message)
-    parentContainerEl.appendChild(dogContainerEl);
-    dogContainerEl.setAttribute('src', data.message)
-    dogContainerEl.className = "card stacked card_img"
 
-    
-  console.log(dogContainerEl)
+//////fetching random cat pic//////////////
+function getRandomCatPic(){
+    fetch(catQueryUrl).then (function (response){
+    console.log(response)
+    if (response.ok){
+        response.json().then(function(data){
+            console.log(data.url)
+
+            displayRandomCatPic(data)
+        })
+    }
+})
+}
+/////////displaying random cat pic////////////
+function displayRandomCatPic(data){
+  // console.log(data.message)
+  catParentContainerEl.appendChild(catContainerEl);
+  catContainerEl.setAttribute("src", data.url);
+  catContainerEl.className = "card stacked card_img";
 }
