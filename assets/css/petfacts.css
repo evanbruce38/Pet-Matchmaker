@@ -198,10 +198,11 @@ body {
   margin-bottom: 1em;
   width: fit-content;
   border-radius: 8px;
+  
 }
 
 p.max-content {
-  width: min-content;
+  width: max-content;
 }
 
 p.min-content {
