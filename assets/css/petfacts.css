@@ -48,10 +48,84 @@
 .My-Color-Theme-5-hsla {
   color: hsla(16, 87, 52, 1);
 }
+
+html {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: var(--ff-primary);
+  padding: 15px;
+  margin: 15px;
+}
+
+/* Nav Bar Style */
+nav {
+  font-size: 150%;
+  font-family: "Times New Roman", Times, serif;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0rem 1rem 1rem 1rem;
+  background-color: #abffef;
+  background-image: linear-gradient(to top, #abffef 0%, #00a889 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+}
+
+nav h1 a {
+  text-align: center;
+  font-family: var(--sans);
+}
+
+nav li {
+  padding: 8px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+nav button {
+  background-color: #abffef;
+  color: #a32d00;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  list-style-type: none;
+  justify-content: space-between;
+  border-radius: 8px;
+  font-size: 80%;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+}
+
+nav h1 {
+  font-size: 100%;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #a32d00;
+  text-decoration: none;
+}
+
+nav button:hover {
+  background-color: #1af0c9;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+/* css for grid boxes */
+body {
+  font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
-  /* for demo purposes only */
   padding: 2rem 0;
 }
 
@@ -89,16 +163,6 @@ body {
   box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
 }
 
-.card__title {
-  font-size: 1.25rem;
-  line-height: 1.1;
-  color: #a32d00;
-  ;
-}
-
-.card__price {
-  font-size: 1.75rem;
-}
 
 .card__img {
   width: 100%;
@@ -126,26 +190,28 @@ body {
 }
 
 .btn {
-  font-size: clamp(2rem, 5vw + 1rem, 5rem);
+  font-size: larger;
   line-height: 1;
   color: white;
-  background: linear-gradient(-45deg, #1af0c9, #f0551a);
+  background: linear-gradient(-45deg, #abffef, #a32d00);
   padding: 0.125em 0.5em;
   margin-bottom: 1em;
   width: fit-content;
+  border-radius: 8px;
 }
 
 p.max-content {
-  width: max-content;
+  width: min-content;
 }
 
 p.min-content {
   width: min-content;
-}
+} 
 /* Make images easier to work with */
-img,
+img, 
 picture {
   max-width: 50%;
   display: block;
   border: solid 3px #1af0c9;
 }
+
