@@ -134,5 +134,9 @@ nav button:hover {
   font-weight: bolder;
   font-family: "Times New Roman", Times, serif;
   justify-content: center;
+}
 
+.opacity {
+  background: rgba(171, 255, 239, 0.5);
+  ;
 }
