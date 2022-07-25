@@ -5,3 +5,7 @@ This project was created to allow a user to easily search for pictures of a sele
 
 # Live website link
 https://evanbruce38.github.io/Pet-Matchmaker/
+
+
+# Screenshot of website
+![screenshot](./assets/images
