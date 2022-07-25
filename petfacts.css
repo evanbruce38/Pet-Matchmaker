@@ -129,10 +129,9 @@ body {
   font-size: clamp(2rem, 5vw + 1rem, 5rem);
   line-height: 1;
   color: white;
-  background: linear-gradient(-45deg, rgb(0, 255, 255), red);
+  background: linear-gradient(-45deg, #1af0c9, #f0551a);
   padding: 0.125em 0.5em;
   margin-bottom: 1em;
-
   width: fit-content;
 }
 
@@ -146,6 +145,7 @@ p.min-content {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
+  max-width: 50%;
   display: block;
+  border: solid 3px #1af0c9;
 }
