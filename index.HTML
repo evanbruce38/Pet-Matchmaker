@@ -40,39 +40,18 @@
     <section class="hero">
         <div class="hero-form">
             <h3>Help us narrow your search!</h3>
-            <p>Fill out this form to help us find the perfect pet for you!</p>
-            <form>
-                <label for="location">Enter your location so we can find the closest shelter:</label>
+            <form id="search-form">
+                <label for="location">Enter a location to find the pets closest to you!</label>
                 <input type="text" placeholder="location" id="location" name="location" class="form-input" />
-                <button>Search</button>
-                <!-- <p>
-                    Would you like your pet to be a boy or a girl? 
-                    <span class="radio-wrapper">
-                      <input type="radio" name="sex-confirm" id="sex-male" />
-                      <label for="sex-male">Male</label>
-                    </span>
-                    <span class="radio-wrapper">  
-                      <input type="radio" name="sex-confirm" id="sex-female"/>
-                      <label for="sex-female">Female</label>
-                    </span>
-                </p> -->
-                <!-- <p>
-                    How large would you like your pet to be?
-                    <span class="radio-wrapper">
-                      <input type="radio" name="size-confirm" id="size-small" />
-                      <label for="size-small">Small (Up to 20lbs)</label>
-                    </span>
-                    <span class="radio-wrapper">
-                        <input type="radio" name="size-confirm" id="size-medium" />
-                        <label for="size-medium">Medium (20-40lbs)</label>
-                    </span>
-                    <span class="radio-wrapper">
-                        <input type="radio" name="size-confirm" id="size-large" />
-                        <label for="size-large">Large (Over 40lbs)</label>
-                    </span>
-                </p> -->
+                <button type="submit" class="btn search-button">
+                    <span>Search!</span>
+                </button>
             </form>
+            <img src="./assets/images/stock animals.jpeg" alt="Dog and cat playing" />
         </div>
+
+        <!-- Search History -->
+        <div id="search-history-container" class="search-history-container"></div>
 
     </section>
 
