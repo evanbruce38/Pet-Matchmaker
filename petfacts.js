@@ -1,7 +1,13 @@
+/////////global variables/////////
 var getDogFactsButton = document.querySelector (".btn")
 var queryUrl = "https://dog.ceo/api/breeds/image/random";
-var dogContainerEl = document.querySelector(".dog-container")
+var dogContainerEl = document.createElement("img")
 var parentContainerEl = document.querySelector(".parent-container");
+
+getDogFactsButton.addEventListener("click", function(){
+getRandomDogPic();
+})
+
 
 
 //////////fetching random dog pic///////////
@@ -18,13 +24,15 @@ fetch(queryUrl).then (function (response){
 })
 
 }
-getRandomDogPic();
 
+
+/////////////display random dog pic//////////
 function displayRandomDogPic(data){
     console.log(data.message)
-    dogContainerEl.innerHTML = 
-    "<p>" + "Something" + "</p>"
+    parentContainerEl.appendChild(dogContainerEl);
+    dogContainerEl.setAttribute('src', data.message)
+    dogContainerEl.className = "card stacked card_img"
 
-    parentContainerEl.append(dogContainerEl);
-//   console.log(dogContainerEl)
+    
+  console.log(dogContainerEl)
 }
