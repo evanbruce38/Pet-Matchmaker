@@ -1,16 +1,14 @@
 /////////global variables/////////
 var searchDogsButton = document.querySelector(".search-button");
-var dogQueryUrl = "https://dog.ceo/api/breeds/image/random";
+var dogQueryUrl = "https://dog.ceo/api/breed/" + "hound" + "/images/random";
 var dogContainerEl = document.createElement("img");
 var dogParentContainerEl = document.querySelector(".dog-parent-container");
 var dogFactsParentContainer = document.querySelector(".parent-dog-facts");
 var placeholderImg = document.querySelector(".placeholder-img");
 var dogFactsContainer = document.createElement("p");
+var breedInput = document.querySelector(".breed-input").value
 
-// var catApiKey = "806b4584-de1a-4111-93e7-df9074e55aba";
-// var catQueryUrl = "https://api.thecatapi.com/v1/images?api_key=" + catApiKey;
-// var catContainerEl = document.createElement("img");
-// var catParentContainerEl = document.querySelector(".cat-parent-container");
+
 
 ////Event Listener for the get pet facts button//////
 searchDogsButton.addEventListener("click", function (event) {
@@ -43,3 +41,5 @@ function displayRandomDogPic(data) {
 }
 
 
+//////get the breed input/////
+// function breedInput = 
