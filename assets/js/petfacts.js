@@ -10,11 +10,7 @@ var dogFactsContainer = document.createElement("p")
 var catContainerEl = document.createElement("img");
 var catParentContainerEl = document.querySelector(".cat-parent-container");
 
-//////Event Listener for the get pet facts button//////
-getPetFactsButton.addEventListener("click", function(){
 
-getRandomDogFacts();
-})
 
 
 
@@ -27,8 +23,9 @@ function getRandomDogFacts(){
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
-
-          displayRandomDogFacts(data);
+          var temp = JSON.parse(data.contents);
+          console.log(temp);
+          displayRandomDogFacts(temp.facts[0]);
         });
       }
     });
@@ -37,6 +34,9 @@ function getRandomDogFacts(){
 function displayRandomDogFacts(data){
   // console.log(data.message)
   dogFactsParentContainer.append(dogFactsContainer);
-  dogFactsContainer.innerHTML = "<p>" + data.contents + "</p>"
+  dogFactsContainer.innerHTML = "<p>" + data + "</p>"
   
 }
+
+//////Event Listener for the get pet facts button//////
+getPetFactsButton.addEventListener("click", getRandomDogFacts);
