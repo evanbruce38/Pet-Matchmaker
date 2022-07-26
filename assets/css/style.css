@@ -122,10 +122,21 @@ nav button:hover {
     font-size: 120%;
 }
 
-
-
 .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.fakeInfo h1, h3 {
+  text-align: center;
+  font-size: 180%;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: center;
+}
+
+.opacity {
+  background: rgba(171, 255, 239, 0.5);
+  ;
 }
