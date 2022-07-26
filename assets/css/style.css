@@ -140,3 +140,16 @@ nav button:hover {
   background: rgba(171, 255, 239, 0.5);
   ;
 }
+
+.btn {
+  background-color: #abffef;
+  color: #a32d00;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  list-style-type: none;
+  justify-content: space-between;
+  border-radius: 8px;
+  font-size: 80%;
+}
+
