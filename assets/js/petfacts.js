@@ -13,32 +13,32 @@ var catParentContainerEl = document.querySelector(".cat-parent-container");
 
 //////Event Listener for the get pet facts button//////
 getPetFactsButton.addEventListener("click", function(){
-getRandomDogPic();
+// getRandomDogPic();
 getRandomDogFacts();
 })
 
 
 
 //////////fetching random dog pic///////////
-function getRandomDogPic(){
-fetch(dogQueryUrl).then(function (response) {
-//   console.log(response);
-  if (response.ok) {
-    response.json().then(function (data) {
-    //   console.log(data);
+// function getRandomDogPic(){
+// fetch(dogQueryUrl).then(function (response) {
+// //   console.log(response);
+//   if (response.ok) {
+//     response.json().then(function (data) {
+//     //   console.log(data);
 
-      displayRandomDogPic(data);
-    });
-  }
-});
-}
-/////////////display random dog pic//////////
-function displayRandomDogPic(data){
-    // console.log(data.message)
-    dogParentContainerEl.appendChild(dogContainerEl);
-    dogContainerEl.setAttribute('src', data.message)
-    dogContainerEl.className = "card stacked card_img"
-}
+//       displayRandomDogPic(data);
+//     });
+//   }
+// });
+// }
+// /////////////display random dog pic//////////
+// function displayRandomDogPic(data){
+//     // console.log(data.message)
+//     dogParentContainerEl.appendChild(dogContainerEl);
+//     dogContainerEl.setAttribute('src', data.message)
+//     dogContainerEl.className = "card stacked card_img"
+// }
 
 ///
 
