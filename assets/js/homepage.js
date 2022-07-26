@@ -41,29 +41,10 @@ function displayRandomDogPic(data) {
   dogParentContainerEl.append(dogContainerEl);
   dogContainerEl.setAttribute("src", data.message);
   dogContainerEl.className = "card stacked card_img";
+ 
 }
 
-//////fetching random dog fact//////////////
-// function getRandomDogFacts(){
-//     fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(
-//         "http://dog-api.kinduff.com/api/facts")}`).then(function (response) {
-//       console.log(response);
-//       if (response.ok) {
-//         response.json().then(function (data) {
-//           console.log(data);
 
-//           displayRandomDogFacts(data);
-//         });
-//       }
-//     });
-// }
-// /////////displaying random cat pic////////////
-// function displayRandomDogFacts(data){
-//   // console.log(data.message)
-//   dogFactsParentContainer.append(dogFactsContainer);
-//   dogFactsContainer.innerHTML = "<p>" + data.contents + "</p>"
-  
-// }
 /////////// Search history saving //////////
 var searchHistoryList = function(breedName) {
   $('.past-search:contains("' + breedName + '")').remove();
