@@ -6,7 +6,7 @@ var dogParentContainerEl = document.querySelector(".dog-parent-container");
 var dogFactsParentContainer = document.querySelector(".parent-dog-facts");
 var placeholderImg = document.querySelector(".placeholder-img");
 var dogFactsContainer = document.createElement("p");
-var breedInput = document.querySelector(".breed-input").value
+
 
 
 
@@ -14,13 +14,15 @@ var breedInput = document.querySelector(".breed-input").value
 searchDogsButton.addEventListener("click", function (event) {
     event.preventDefault()
     console.log("click")
-  getRandomDogPic();
+    var breedInput = document.querySelector(".breed-input").value;
+  getRandomDogPic(breedInput);
 //   getRandomDogFacts();
+    searchHistoryList(breedInput);
 });
 
 ////////fetching random dog pic///////////
-function getRandomDogPic() {
-    var breedInput = document.querySelector(".breed-input").value;
+function getRandomDogPic(breedInput) {
+    
     var dogQueryUrl =
       "https://dog.ceo/api/breed/" + breedInput + "/images/random";
   fetch(dogQueryUrl).then(function (response) {
@@ -45,6 +47,10 @@ function displayRandomDogPic(data) {
 }
 
 var mySearchHist = []
+var previousSearchHistory = JSON.parse(localStorage.getItem("history"))
+if (previousSearchHistory != null){
+    mySearchHist= previousSearchHistory
+}
 
 /////////// Search history saving //////////
 var searchHistoryList = function(breedName) {
@@ -55,7 +61,7 @@ var searchHistoryList = function(breedName) {
 } else{
     mySearchHist.push(breedName)
 }
-localStorage.setItem('history', mySearchHist)
+localStorage.setItem('history',JSON.stringify(mySearchHist));
 
 ////////////////////////////////////////
 
