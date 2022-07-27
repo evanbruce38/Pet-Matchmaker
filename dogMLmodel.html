@@ -1,4 +1,18 @@
-<div>Teachable Machine Image Model</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <script src="https://kit.fontawesome.com/9f86b37536.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <title>Dog ML</title>
+</head>
+
+<body>
+
+    <div>Teachable Machine Image Model</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -58,3 +72,167 @@
         }
     }
 </script>
+
+    <!-- Header/Navigation -->
+    <header>
+        <div>
+        <nav>
+            <h1>
+            <a href="index.html"><span class="fa-solid fa-paw"></span> Find a K-9</a>
+            </h1>       
+            <ul>
+                <li>
+                    <button><a href="petfacts.html">Dog Videos</a></button>
+                </li>
+                <li>
+                    <button><a href="dogMLmodel.html">Machine Learning Model</a></button>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="opacity">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-form">
+            <h2>Random dog pictures!</h2>
+            <form id="search-form">
+                
+                <label for="breed">Select a breed you would like to see a picture of!</label>
+                <select class="breed-input" name="breed" id="breed">
+                    <option>affenpinscher</option>
+                    <option>african</option>
+                    <option>airedale</option>
+                    <option>appenzeller</option>
+                    <option>australian</option>
+                    <option>basenji</option>
+                    <option>beagle</option>
+                    <option>bluetick</option>
+                    <option>borzoi</option>
+                    <option>bouvier</option>
+                    <option>boxer</option>
+                    <option>brabancon</option>
+                    <option>briard</option>
+                    <option>buhund</option>
+                    <option>bulldog</option>
+                    <option>bullterrier</option>
+                    <option>cattledog</option>
+                    <option>chihuahua</option>
+                    <option>chow</option>
+                    <option>clumber</option>
+                    <option>cockapoo</option>
+                    <option>collie</option>
+                    <option>coonhound</option>
+                    <option>corgi</option>
+                    <option>cotondetulear</option>
+                    <option>dachsund</option>
+                    <option>dalmatian</option>
+                    <option>dane</option>
+                    <option>deerhound</option>
+                    <option>dhole</option>
+                    <option>dingo</option>
+                    <option>doberman</option>
+                    <option>elkhound</option>
+                    <option>entlebucher</option>
+                    <option>eskimo</option>
+                    <option>finnish</option>
+                    <option>frise</option>
+                    <option>germanshepherd</option>
+                    <option>greyhound</option>
+                    <option>groenendael</option>
+                    <option>havanese</option>
+                    <option>hound</option>
+                    <option>husky</option>
+                    <option>keeshond</option>
+                    <option>kelpie</option>
+                    <option>komondor</option>
+                    <option>kuvasz</option>
+                    <option>labradoodle</option>
+                    <option>labrador</option>
+                    <option>leonberg</option>
+                    <option>lhasa</option>
+                    <option>malamute</option>
+                    <option>malinois</option>
+                    <option>maltese</option>
+                    <option>mastiff</option>
+                    <option>mexicanhairless</option>
+                    <option>mix</option>
+                    <option>mountain</option>
+                    <option>newfoundland</option>
+                    <option>otterhound</option>
+                    <option>ovcharka</option>
+                    <option>papillon</option>
+                    <option>pekinese</option>
+                    <option>pembroke</option>
+                    <option>pinscher</option>
+                    <option>pitbull</option>
+                    <option>pointer</option>
+                    <option>pomeranian</option>
+                    <option>poodle</option>
+                    <option>pug</option>
+                    <option>puggle</option>
+                    <option>pyrenees</option>
+                    <option>redbone</option>
+                    <option>retriever</option>
+                    <option>ridgeback</option>
+                    <option>rottweiler</option>
+                    <option>saluki</option>
+                    <option>samoyed</option>
+                    <option>schipperke</option>
+                    <option>schnauzer</option>
+                    <option>settler</option>
+                    <option>sharpei</option>
+                    <option>sheepdog</option>
+                    <option>shiba</option>
+                    <option>shihtzu</option>
+                    <option>spaniel</option>
+                    <option>springer</option>
+                    <option>stbernard</option>
+                    <option>terrier</option>
+                    <option>tervuren</option>
+                    <option>vizsla</option>
+                    <option>waterdog</option>
+                    <option>weimaraner</option>
+                    <option>whippet</option>
+                    <option>wolfhound</option>
+
+                </select>
+                <button type="submit" class="btn search-button">
+                    <span class="fa-solid fa-magnifying-glass"></span>
+                </button>
+                <p class="previous-search-container">Previous Searches  </p>
+            </form>
+
+            <div class="dog-parent-container">
+            <!-- <img class="placeholder-img" src="./assets/images/stock animals.jpeg" alt="Dog and cat playing" /> -->
+            </div>
+            </div>
+
+        <!-- Search History -->
+        <div id="search-history-container" class="search-history-container"></div>
+
+    </section>
+
+</div>
+<!-- Footer -->
+<footer>
+    <div>
+    <nav>
+        <ul>
+            <li>
+                <button><a href="faq.html">FAQ</a></button>
+            </li>
+             <li>
+                <button><a href="privacypolicy.html">Privacy Policy</a></button>
+            </li>
+            
+        </ul>
+    </nav>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/homepage.js"></script>
+</body>
+
+</html>
