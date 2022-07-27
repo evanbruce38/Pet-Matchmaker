@@ -7,6 +7,8 @@ var dogFactsParentContainer = document.querySelector(".parent-dog-facts");
 var placeholderImg = document.querySelector(".placeholder-img");
 var dogFactsContainer = document.createElement("p");
 
+var searchContainer = document.querySelector(".previous-search-container");
+
 
 
 
@@ -45,11 +47,14 @@ function displayRandomDogPic(data) {
   dogContainerEl.className = "card stacked card_img";
  
 }
-////////////////////////////
+/////////////////
 var mySearchHist = []
 var previousSearchHistory = JSON.parse(localStorage.getItem("history"))
 if (previousSearchHistory != null){
     mySearchHist= previousSearchHistory
+    
+    searchContainer.append(previousSearchHistory)
+   document.createElement("button");
 }
 
 /////////// Search history saving //////////

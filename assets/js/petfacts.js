@@ -6,8 +6,8 @@ var dogParentContainerEl = document.querySelector(".dog-parent-container");
 var dogFactsParentContainer = document.querySelector(".parent-dog-facts");
 var dogFactsContainer = document.createElement("p");
 
-var catContainerEl = document.createElement("img");
-var catParentContainerEl = document.querySelector(".cat-parent-container");
+// var catContainerEl = document.createElement("img");
+// var catParentContainerEl = document.querySelector(".cat-parent-container");
 
 //////////fetching random dog fact//////////////////
 // function getRandomDogFacts(){
