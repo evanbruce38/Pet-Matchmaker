@@ -44,10 +44,20 @@ function displayRandomDogPic(data) {
  
 }
 
+var mySearchHist = []
 
 /////////// Search history saving //////////
 var searchHistoryList = function(breedName) {
-  $('.past-search:contains("' + breedName + '")').remove();
+//   $('.past-search:contains("' + breedName + '")').remove();
+
+  if (mySearchHist.length > 3){
+      mySearchHist[0] = breedName
+} else{
+    mySearchHist.push(breedName)
+}
+localStorage.setItem('history', mySearchHist)
+
+////////////////////////////////////////
 
   // create entry with breed name
   var searchHistoryEntry = $("<p>");
