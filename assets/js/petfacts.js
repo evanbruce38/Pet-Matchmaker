@@ -25,17 +25,16 @@ var catParentContainerEl = document.querySelector(".cat-parent-container");
 // }
 //////////fetching random dog fact//////////////////
 function getRandomDogFacts() {
-  fetch("https://dog-api.kinduff.com/api/facts", {mode: 'cors',
-  headers: {
-    'Access-Control-Allow-Origin':'*'
-  }}).then(function (response) {
+  fetch("https://random.dog/woof?include=mp4"
+     
+  ).then(function (response) {
     console.log(response);
     if (response.ok) {
-      response.json().then(function (data) {
+      response.text().then(function (data) {
         console.log(data);
-        var temp = JSON.parse(data.contents);
-        console.log(temp);
-        displayRandomDogFacts(temp.facts[0]);
+        // var temp = JSON.parse(data.contents);
+        // console.log(temp);
+        displayRandomDogFacts(data);
       });
     }
   });
@@ -44,7 +43,12 @@ function getRandomDogFacts() {
 function displayRandomDogFacts(data) {
   // console.log(data.message)
   dogFactsParentContainer.append(dogFactsContainer);
-  dogFactsContainer.innerHTML = "<p>" + data + "</p>";
+  var videoEl = `
+  <video width="320" height="240" controls>
+  <source src="https://random.dog/${data}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>`;
+  dogFactsContainer.innerHTML = videoEl 
 }
 
 //////Event Listener for the get pet facts button//////
