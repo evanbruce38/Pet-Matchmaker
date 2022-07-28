@@ -13,20 +13,89 @@
 <body>
 
     <!-- Header/Navigation -->
-    <header>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+
+  
+
+    <a class="navbar-item" href="index.html">
+      <span class="fa-solid fa-paw"></span> Find a K-9</a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      
+<ul>
+    <li>
+    <button><a class="navbar-item" href="petfacts.html">Dog Videos</a></button>
+</li>
+       <li>
+    <button><a class="navbar-item" href="dogMLmodel.html">Machine Learning Model</a></button>
+</li>
+
+
+</ul>
+       
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button">
+              <p>Sign up</p>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+  </div>
+</nav>
+
+    <!----->
+    <!-- <header>
         <div>
         <nav>
             <h1>
-            <a href="index.HTML"><span class="fa-solid fa-paw"></span> Find a K-9</a>
+            <a href="index.html"><span class="fa-solid fa-paw"></span> Find a K-9</a>
             </h1>       
             <ul>
                 <li>
                     <button><a href="petfacts.html">Dog Videos</a></button>
                 </li>
+                <li>
+                    <button><a href="dogMLmodel.html">Machine Learning Model</a></button>
+                </li>
             </ul>
         </nav>
         </div>
-    </header>
+    </header> -->
     <div class="opacity">
     <!-- Hero -->
     <section class="hero">
@@ -136,11 +205,11 @@
                 <button type="submit" class="btn search-button">
                     <span class="fa-solid fa-magnifying-glass"></span>
                 </button>
-                <p class="previous-search-container">Previous Searches  </p>
+                <div class="previous-search-container">Previous Searches  </div>
             </form>
 
             <div class="dog-parent-container">
-            <!-- <img class="placeholder-img" src="./assets/images/stock animals.jpeg" alt="Dog and cat playing" /> -->
+            <img id="placeholder-img" src="./assets/images/stock animals.jpeg" alt="Dog and cat playing" />
             </div>
             </div>
 
@@ -172,3 +241,4 @@
 </body>
 
 </html>
+

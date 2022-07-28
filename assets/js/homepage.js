@@ -12,15 +12,7 @@ var searchContainer = document.querySelector(".previous-search-container");
 
 
 
-////Event Listener for the get pet facts button//////
-searchDogsButton.addEventListener("click", function (event) {
-    event.preventDefault()
-    console.log("click")
-    var breedInput = document.querySelector(".breed-input").value;
-  getRandomDogPic(breedInput);
-//   getRandomDogFacts();
-    searchHistoryList(breedInput);
-});
+
 
 ////////fetching random dog pic///////////
 function getRandomDogPic(breedInput) {
@@ -42,19 +34,31 @@ function getRandomDogPic(breedInput) {
 function displayRandomDogPic(data) {
   // console.log(data.message)
 //   dogParentContainerEl.replace();
-  dogParentContainerEl.append(dogContainerEl);
-  dogContainerEl.setAttribute("src", data.message);
+  document.getElementById("placeholder-img").src= data.message
+  // dogParentContainerEl.append(dogContainerEl);
+  // dogContainerEl.setAttribute("src", data.message);
   dogContainerEl.className = "card stacked card_img";
  
 }
 /////////////////
-var mySearchHist = []
-var previousSearchHistory = JSON.parse(localStorage.getItem("history"))
+var mySearchHist = [];
+var previousSearchHistory = JSON.parse(localStorage.getItem("history"));
+
 if (previousSearchHistory != null){
-    mySearchHist= previousSearchHistory
-    
-    searchContainer.append(previousSearchHistory)
-   document.createElement("button");
+    mySearchHist = [...previousSearchHistory];
+    mySearchHist.forEach(function(savedPet, i) {
+      console.log(savedPet);
+      let petButton = document.createElement("button");
+      petButton.textContent = savedPet;
+      petButton.setAttribute("id", `petButton${i}`);
+      searchContainer.append(petButton);
+      petButton.addEventListener("click", function(event){
+        // comment out the prevent default to see if it is needed, later...
+        event.preventDefault();
+        getRandomDogPic(petButton.textContent);
+      })
+    })
+
 }
 
 /////////// Search history saving //////////
@@ -71,7 +75,15 @@ localStorage.setItem('history',JSON.stringify(mySearchHist));
   }
 
   
-
+////Event Listener for the get pet facts button//////
+searchDogsButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    console.log("click")
+    var breedInput = document.querySelector(".breed-input").value;
+  getRandomDogPic(breedInput);
+//   getRandomDogFacts();
+    searchHistoryList(breedInput);
+});
 
   
 
