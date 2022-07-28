@@ -8,16 +8,17 @@ const URL = "https://teachablemachine.withgoogle.com/models/GPT4svat2/";
 
 let model, webcam, labelContainer, maxPredictions;
 
-// Load the image model and setup the webcam
 async function init() {
   const modelURL = URL + "model.json";
   const metadataURL = URL + "metadata.json";
+
   // load the model and metadata
   // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
   // or files from your local hard drive
   // Note: the pose library adds "tmImage" object to your window (window.tmImage)
   model = await tmImage.load(modelURL, metadataURL);
   maxPredictions = model.getTotalClasses();
+
   // Convenience function to setup a webcam
   const flip = true; // whether to flip the webcam
   webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
@@ -29,15 +30,11 @@ async function init() {
   document.getElementById("webcam-container").appendChild(webcam.canvas);
   labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
-    if (prediction[i].probability.toFixed(2) >= minThreshold) {
-      console.log('inside if function');
-      highestProbability = prediction[i].probability.toFixed(2);
-      console.log('probability is', highestProbability);
-    }
     // and class labels
     labelContainer.appendChild(document.createElement("div"));
   }
 }
+
 async function loop() {
   webcam.update(); // update the webcam frame
   await predict();
