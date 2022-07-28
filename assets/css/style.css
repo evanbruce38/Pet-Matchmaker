@@ -54,22 +54,24 @@ html {
 }
 
 body {
-  padding: 15px;
-  margin: 15px;
+  padding: 5px;
+  margin: 10px;
 }
 
 /* Nav Bar Style */
-nav {
+nav, .navbar {
   font-size: 150%;
   font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
   position: sticky;
   display: flex;
   justify-content: space-between;
-  height: 60px;
-  /* padding: 0rem 1rem 1rem 1rem; */
+  /*height: 60px; */
+  padding:5px; 
   background-color: #abffef;
   background-image: linear-gradient(to top, #abffef 0%, #00a889 100%);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
 }
 
 nav h1 a { 
@@ -77,21 +79,19 @@ nav h1 a {
   font-family: var(--sans);
 }
 
-/* nav li {
-  padding: 8px;
+ nav li {
   display: inline-flex;
   justify-content: space-between;
-} */
-nav button {
+  box-sizing: inherit;
+} 
+
+nav button, .is-primary {
   background-color: #abffef;
-  color: #a32d00;
-  /* margin-top: 5px;
-  margin-bottom: 5px; */
-  /* padding: 5px; */
+  text-decoration: #a32d00;
+  font-family: 'Times New Roman', Times, serif;
   list-style-type: none;
-  justify-content: space-between;
   border-radius: 8px;
-  font-size: 80%;
+  /*font-size: 80%;*/
   padding: 8px;
   display: inline-flex;
   justify-content: space-between;
@@ -104,26 +104,35 @@ nav button {
 nav h1 {
   font-size: 100%;
   font-weight: bold;
-  
   text-align: center;
+  justify-content: center;
+ /* padding-top: 5px;
+  padding-left: 5px; */
 }
 
 nav a {
   color: #a32d00;
-  text-decoration: none;
+  font-weight: bolder;
+  font-size: 120%;
+}
+
+.navbar-start {
+  justify-content:center;
+  flex:auto;
+}
+
+.navbar-item {
+  text-decoration-color: #a32d00;
+  padding: 6px;
+  justify-content: space-between;
+  color:#a32d00;
+  font-weight: bolder;
+  display: inline-flex;
 }
 
 .navbar-item:hover {
   background-color: #1af0c9;
 } 
-
-.cat-facts .dog-facts {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10 px;
-    border-radius: 8px;
-    font-size: 120%;
-}
 
 .flex-container {
     display: flex;
@@ -141,12 +150,12 @@ nav a {
 
 .opacity {
   background: rgba(171, 255, 239, 0.5);
-  ;
 }
 
 .btn {
   background-color: #abffef;
   color: #a32d00;
+  text-decoration: #a32d00;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
@@ -156,3 +165,42 @@ nav a {
   font-size: 80%;
 }
 
+.hero {
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  padding: 15px;
+}
+
+.hero h2 {
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size:larger;
+}
+
+/* form p {
+  font-weight: bold;
+  text-decoration: underline;
+} 
+*/
+
+/* petfacts css */
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  
+}
+
+.is-primary {
+  font-size: xx-large;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  position:static;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left:auto;
+  width:fit-content;
+}
