@@ -42,8 +42,9 @@ function getRandomDogPic(breedInput) {
 function displayRandomDogPic(data) {
   // console.log(data.message)
 //   dogParentContainerEl.replace();
-  dogParentContainerEl.append(dogContainerEl);
-  dogContainerEl.setAttribute("src", data.message);
+  document.getElementById("placeholder-img").src= data.message
+  // dogParentContainerEl.append(dogContainerEl);
+  // dogContainerEl.setAttribute("src", data.message);
   dogContainerEl.className = "card stacked card_img";
  
 }
